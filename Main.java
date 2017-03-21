@@ -1,7 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        ValidParentheses vp = new ValidParentheses();
-        System.out.println(vp.isValid("["));
+        Permutations perm = new Permutations();
+        int[] nums = {1, 2, 3};
+        System.out.println(perm.permute(nums));
     }
 }
