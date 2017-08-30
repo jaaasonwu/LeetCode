@@ -1,9 +1,9 @@
 public class Main {
 
     public static void main(String[] args) {
-        LongestSubstring longestSubstring = new LongestSubstring();
+        RomanToInt romanToInt = new RomanToInt();
 
-        System.out.println(longestSubstring.lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(romanToInt.romanToInt("MCMXCVI"));
 
     }
 }
