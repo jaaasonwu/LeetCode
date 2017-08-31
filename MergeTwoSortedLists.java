@@ -16,7 +16,7 @@ public class MergeTwoSortedLists {
         ListNode next;
         ListNode(int x) { val = x; }
     }
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode result, current;
         if (l1 == null) {
             return l2;
