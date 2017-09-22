@@ -1,12 +1,11 @@
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
-        ThreeSum ts = new ThreeSum();
-        List<List<Integer>> result;
-        int nums[] = {-1, 0, 1, 2, -1, -4};
-        result = ts.threeSum(nums);
+        FindMedianSortedArrays fm = new FindMedianSortedArrays();
+        int nums1[] = {1, 3};
+        int nums2[] = {2, 4};
+        double result;
+        result = fm.findMedianSortedArrays(nums1, nums2);
         System.out.println(result);
     }
 }
