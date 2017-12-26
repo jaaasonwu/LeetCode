@@ -2,7 +2,7 @@
  * Created by Jason Wu on 2017/9/5.
  */
 public class IsSameTree {
-    public boolean isSameTree(InorderTraversal.TreeNode p, InorderTraversal.TreeNode q) {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;
         } else if (p == null || q == null) {
