@@ -1,8 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        String[] strings = {};
-        LongestCommonPrefix lcp = new LongestCommonPrefix();
-        System.out.println(lcp.longestCommonPrefix(strings));
+        CombinationSum cs = new CombinationSum();
+        System.out.println(cs.combinationSum2(new int[]{2, 3, 4, 7}, 500));
     }
 }
