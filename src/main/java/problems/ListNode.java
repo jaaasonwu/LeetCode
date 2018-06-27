@@ -4,10 +4,10 @@ package problems;
  * Created by jasonwu on 12/26/2017.
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
     }
 }
