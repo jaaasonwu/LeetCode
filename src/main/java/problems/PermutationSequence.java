@@ -20,6 +20,7 @@ public class PermutationSequence {
         calcPermutation(n, k);
         return sb.toString();
     }
+
     public void calcPermutation(int n, int k) {
         if (n == 1) {
             sb.append(remain.get(0));
@@ -31,3 +32,4 @@ public class PermutationSequence {
         remain.remove(new Integer(remain.get(next)));
         calcPermutation(n - 1, (k - 1) % factorials[n - 2] + 1);
     }
+}
