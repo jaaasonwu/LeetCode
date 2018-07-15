@@ -1,3 +1,5 @@
+package problems;
+
 import org.junit.Test;
 import problems.AllNodesDistanceK;
 import problems.TreeNode;
