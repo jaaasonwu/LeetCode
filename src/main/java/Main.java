@@ -1,9 +1,12 @@
 import problems.CombinationSum2;
+import problems.DuplicateInArray;
 
 public class Main {
 
     public static void main(String[] args) {
-        CombinationSum2 cs = new CombinationSum2();
-        System.out.println(cs.combinationSum2(new int[]{3, 1, 3, 5, 1, 1}, 8));
+        DuplicateInArray dia = new DuplicateInArray();
+        int[] duplicate = new int[1];
+        System.out.println(dia.duplicate2(new int[]{2, 4, 3, 1, 4}, 5, duplicate));
+        System.out.println(duplicate[0]);
     }
 }
