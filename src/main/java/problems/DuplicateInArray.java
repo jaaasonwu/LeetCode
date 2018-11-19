@@ -15,7 +15,7 @@ public class DuplicateInArray {
         }
 
         for (int i = 0; i < length; i++) {
-            if (numbers[i] != i) {
+            while (numbers[i] != i) {
                 if (numbers[numbers[i]] != numbers[i]) {
                     swap(numbers, i, numbers[i]);
                 } else {
@@ -38,7 +38,7 @@ public class DuplicateInArray {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < length; i++) {
             int num = numbers[i];
-            Integer freq = (Integer) map.get(num);
+            Integer freq = map.get(num);
             if (freq == null) {
                 map.put(num, 1);
             } else {
