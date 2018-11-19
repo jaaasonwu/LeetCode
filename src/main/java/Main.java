@@ -1,12 +1,9 @@
-import problems.CombinationSum2;
-import problems.DuplicateInArray;
-import problems.ReplaceSpace;
-import problems.SearchIn2dArray;
+import problems.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        ReplaceSpace rs = new ReplaceSpace();
-        System.out.println(rs.replaceSpace("We are happy.", 1));
+        ReconstructBinaryTree rbt = new ReconstructBinaryTree();
+        System.out.println(rbt.reConstructBinaryTree(new int[]{1, 2, 4, 7, 3, 5, 6, 8}, new int[]{4, 7, 2, 1, 5, 3, 6 ,8}));
     }
 }
