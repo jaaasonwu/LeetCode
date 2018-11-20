@@ -3,7 +3,7 @@ import problems.*;
 public class Main {
 
     public static void main(String[] args) {
-        Fibonacci fi = new Fibonacci();
-        System.out.println(fi.Fibonacci(5));
+        SpinArrayMinimum sa = new SpinArrayMinimum();
+        System.out.println(sa.minNumberInRotateArray(new int[]{4, 5, 1, 2, 3}));
     }
 }
