@@ -16,9 +16,7 @@ public class CloneOfComplexLinkedList {
         RandomListNode curr = head;
         while (curr != null) {
             RandomListNode newNode = new RandomListNode(curr.label);
-            if (curr.next != null) {
-                newNode.next = curr.next;
-            }
+            newNode.next = curr.next;
             curr.next = newNode;
             curr = newNode.next;
         }
@@ -40,9 +38,9 @@ public class CloneOfComplexLinkedList {
         RandomListNode curr1 = head;
         RandomListNode curr2 = head2;
 
-        while (curr2 != null) {
+        while (curr2 != null && curr1 != null) {
             curr1.next = curr1.next.next;
-            curr2.next = curr2.next.next;
+            if (curr2.next != null) curr2.next = curr2.next.next;
 
             curr1 = curr1.next;
             curr2 = curr2.next;
