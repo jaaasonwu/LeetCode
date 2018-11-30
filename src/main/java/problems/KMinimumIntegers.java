@@ -1,6 +1,7 @@
 package problems;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 public class KMinimumIntegers {
     public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
@@ -51,5 +52,25 @@ public class KMinimumIntegers {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+    }
+
+    public ArrayList<Integer> GetLeastNumbers_Solution2(int [] input, int k) {
+        int end = input.length - 1;
+
+        if (end + 1 < k || k == 0) {
+            return new ArrayList<>();
+        }
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>(k);
+        for (int i : input) {
+            pq.add(i);
+        }
+
+        ArrayList<Integer> res = new ArrayList<>();
+        for (int i = 0; i < k; i++) {
+            res.add(pq.poll());
+        }
+
+        return res;
     }
 }
