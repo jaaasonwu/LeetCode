@@ -49,4 +49,54 @@ public class InversePairsInArray {
         }
         return (left + right + count) % 1000000007;
     }
+
+    public int InversePairs2(int [] array) {
+        if (array.length <= 0) {
+            return 0;
+        }
+
+        return sort(array,0, array.length - 1);
+    }
+
+    private int sort(int[] array, int start, int end) {
+        if (start == end) {
+            return 0;
+        }
+        int mid = start + (end - start) / 2;
+        int left = sort(array, start, mid);
+        int right = sort(array, mid + 1, end);
+
+        return (merge(array, start, mid, end) + left + right) % 1000000007;
+    }
+
+    private int merge(int[] array, int start, int mid, int end) {
+        int leftEnd = mid, rightEnd = end;
+        int[] temp = new int[end - start + 1];
+        int pos = temp.length - 1;
+        int count = 0;
+
+        while (leftEnd >= start && rightEnd > mid) {
+            if (array[leftEnd] > array[rightEnd]) {
+                temp[pos--] = array[leftEnd--];
+                count += rightEnd - mid;
+                count %= 1000000007;
+            } else {
+                temp[pos--] = array[rightEnd--];
+            }
+        }
+
+        while (leftEnd >= start) {
+            temp[pos--] = array[leftEnd--];
+        }
+
+        while (rightEnd > mid) {
+            temp[pos--] = array[rightEnd--];
+        }
+
+        for (int i = start; i <= end; i++) {
+            array[i] = temp[i - start];
+        }
+
+        return count;
+    }
 }
