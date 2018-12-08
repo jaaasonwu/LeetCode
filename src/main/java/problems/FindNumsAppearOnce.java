@@ -14,7 +14,7 @@ public class FindNumsAppearOnce {
 
         int indexOfOne = findIndexOf1(xorResult);
 
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {//
             if (isBit1(array[i], indexOfOne)) {
                 num1[0] ^= array[i];
             } else {
